@@ -1,11 +1,18 @@
 /* Reset and basic styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif; /* Default fallback font */
     margin: 0;
     padding: 0;
     background: #f4f4f4 url('wall-texture.jpg') center/cover no-repeat; /* Wall-like background */
     text-align: center;
     color: #333;
+}
+
+/* Apply the new font style for text */
+h1, p, a {
+    font-family: 'Georgia', serif; /* Styled font similar to the screenshot */
+    letter-spacing: 0.5px;
+    line-height: 1.5;
 }
 
 /* Container Styling */
@@ -62,7 +69,7 @@ body {
     display: inline-block;
     margin: 10px;
     text-decoration: none;
-    color: #007BFF;
+    color: #000; /* Black for B&W style */
     font-size: 18px;
     transition: color 0.3s ease;
 }
@@ -70,10 +77,13 @@ body {
 .social-links a i {
     margin-right: 8px; /* Space between icon and text */
     font-size: 20px;
+    filter: grayscale(100%); /* Black and white icons */
+    transition: filter 0.3s ease, color 0.3s ease;
 }
 
-.social-links a:hover {
-    color: #0056b3;
+.social-links a:hover i {
+    filter: grayscale(0%); /* Remove grayscale on hover */
+    color: #333; /* Slightly darker hover color */
 }
 
 /* Gallery Section */
@@ -117,29 +127,4 @@ body {
 
 .link-icon:hover {
     background: rgba(0, 0, 0, 0.8);
-}
-
-/* Call-to-Action Button */
-.cta-button {
-    margin: 30px 0;
-}
-
-.button {
-    display: inline-block;
-    background: #007BFF;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
-    transition: background 0.3s ease;
-}
-
-.button:hover {
-    background: #0056b3;
-}
-
-.button i {
-    margin-left: 8px;
 }
