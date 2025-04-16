@@ -11,3 +11,11 @@ function closeLightbox() {
     const lightbox = document.getElementById('lightbox');
     lightbox.style.display = 'none'; // Hide the lightbox
 }
+
+// Function to download the .vcf file
+function downloadVCF() {
+    const link = document.createElement('a');
+    link.href = 'contact.vcf'; // Path to the .vcf file
+    link.download = 'contact.vcf'; // File name for download
+    link.click();
+}
