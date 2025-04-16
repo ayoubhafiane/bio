@@ -1,41 +1,21 @@
 /* Reset and basic styles */
 body {
-    font-family: 'Arial', sans-serif; /* Default fallback font */
+    font-family: 'Georgia', serif;
     margin: 0;
     padding: 0;
-    background: #f4f4f4 url('wall-texture.jpg') center/cover no-repeat; /* Wall-like background */
+    background: #f4f4f4 url('wall-texture.jpg') center/cover no-repeat;
     text-align: center;
     color: #333;
 }
 
-/* Apply the new font style for text */
-h1, p, a {
-    font-family: 'Georgia', serif; /* Styled font similar to the screenshot */
-    letter-spacing: 0.5px;
-    line-height: 1.5;
-}
-
-/* Container Styling */
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.9); /* Slight transparency */
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    background-image: url('wall-texture.jpg'); /* Add texture */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-/* Cover Picture */
+/* Cover Picture - Original Design */
 .cover img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-bottom-left-radius: 50% 20%; /* Curve effect */
-    border-bottom-right-radius: 50% 20%; /* Curve effect */
+    width: 100%; /* Full width */
+    height: 200px; /* Fixed height for the cover */
+    object-fit: cover; /* Ensures the image covers the area */
+    border-bottom-left-radius: 50% 20%; /* Curved bottom edges */
+    border-bottom-right-radius: 50% 20%; /* Curved bottom edges */
+    display: block;
 }
 
 /* Profile Picture */
@@ -43,7 +23,7 @@ h1, p, a {
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    margin-top: -60px; /* Overlap effect */
+    margin-top: -60px; /* Overlaps onto the cover */
     border: 4px solid white;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -69,21 +49,21 @@ h1, p, a {
     display: inline-block;
     margin: 10px;
     text-decoration: none;
-    color: #000; /* Black for B&W style */
+    color: #000;
     font-size: 18px;
     transition: color 0.3s ease;
 }
 
 .social-links a i {
-    margin-right: 8px; /* Space between icon and text */
+    margin-right: 8px;
     font-size: 20px;
-    filter: grayscale(100%); /* Black and white icons */
+    filter: grayscale(100%);
     transition: filter 0.3s ease, color 0.3s ease;
 }
 
 .social-links a:hover i {
-    filter: grayscale(0%); /* Remove grayscale on hover */
-    color: #333; /* Slightly darker hover color */
+    filter: grayscale(0%);
+    color: #333;
 }
 
 /* Gallery Section */
