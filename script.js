@@ -1,21 +1,13 @@
-// Button interaction logic
-document.getElementById("yesButton").addEventListener("click", function () {
-    showMessage("You chose Yes!", "#4caf50");
-});
+// Function to open the lightbox and display the clicked image
+function openLightbox(imageSrc) {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightbox-image');
+    lightboxImage.src = imageSrc;
+    lightbox.style.display = 'flex'; // Show the lightbox
+}
 
-document.getElementById("noButton").addEventListener("click", function () {
-    showMessage("You chose No!", "#e53935");
-});
-
-// Function to display the result message
-function showMessage(message, color) {
-    const resultElement = document.getElementById("result");
-    resultElement.textContent = message;
-    resultElement.style.color = color;
-    resultElement.classList.add("show");
-
-    // Remove animation after a while
-    setTimeout(() => {
-        resultElement.classList.remove("show");
-    }, 2000);
+// Function to close the lightbox
+function closeLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    lightbox.style.display = 'none'; // Hide the lightbox
 }
