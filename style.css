@@ -13,10 +13,10 @@ body {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.8); /* Slight transparency for the container */
+    background: rgba(255, 255, 255, 0.9); /* Slight transparency */
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    background-image: url('wall-texture.jpg'); /* Add the wall texture to the container */
+    background-image: url('wall-texture.jpg'); /* Add texture */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -54,7 +54,12 @@ body {
 }
 
 /* Social Links */
+.social-links {
+    margin: 20px 0;
+}
+
 .social-links a {
+    display: inline-block;
     margin: 10px;
     text-decoration: none;
     color: #007BFF;
@@ -62,14 +67,79 @@ body {
     transition: color 0.3s ease;
 }
 
+.social-links a i {
+    margin-right: 8px; /* Space between icon and text */
+    font-size: 20px;
+}
+
 .social-links a:hover {
     color: #0056b3;
 }
 
-/* YouTube Embed */
-.youtube iframe {
-    width: 100%;
-    height: 200px;
-    margin-top: 20px;
+/* Gallery Section */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
     border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
+.link-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 8px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.link-icon:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Call-to-Action Button */
+.cta-button {
+    margin: 30px 0;
+}
+
+.button {
+    display: inline-block;
+    background: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.button:hover {
+    background: #0056b3;
+}
+
+.button i {
+    margin-left: 8px;
 }
