@@ -1,0 +1,75 @@
+/* Reset and basic styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4 url('wall-texture.jpg') center/cover no-repeat; /* Wall-like background */
+    text-align: center;
+    color: #333;
+}
+
+/* Container Styling */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8); /* Slight transparency for the container */
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-image: url('wall-texture.jpg'); /* Add the wall texture to the container */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Cover Picture */
+.cover img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom-left-radius: 50% 20%; /* Curve effect */
+    border-bottom-right-radius: 50% 20%; /* Curve effect */
+}
+
+/* Profile Picture */
+.profile img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-top: -60px; /* Overlap effect */
+    border: 4px solid white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Name and Description */
+.info h1 {
+    font-size: 24px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.info p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Social Links */
+.social-links a {
+    margin: 10px;
+    text-decoration: none;
+    color: #007BFF;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #0056b3;
+}
+
+/* YouTube Embed */
+.youtube iframe {
+    width: 100%;
+    height: 200px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
