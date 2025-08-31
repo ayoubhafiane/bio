@@ -69,7 +69,7 @@ body {
 /* Gallery Section */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Always 2 columns */
+    grid-template-columns: repeat(3, 1fr); /* 3 columns per row */
     gap: 10px;
     margin: 20px 0;
 }
