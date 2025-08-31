@@ -1,61 +1,82 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="cyan">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Ayoub Hafiane — Future-Focused Engineer</title>
-  <meta name="description" content="Software engineer building performant & intelligent systems." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400..700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles/base.css" />
-  <script type="module" defer src="./scripts/init.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayoub Hafiane</title>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <canvas id="bg-canvas" aria-hidden="true"></canvas>
-  <header class="site-header">
-    <nav class="nav">
-      <a class="logo" href="#">AH<span class="logo-glow"></span></a>
-      <button class="theme-toggle" aria-label="Toggle theme"></button>
-    </nav>
-    <section class="hero reveal">
-      <h1><span class="gradient-text">Ayoub Hafiane</span></h1>
-      <p class="tagline">
-        Building <span class="rotator" data-words='["scalable systems","intelligent tools","delightful interfaces","future tech"]'>scalable systems</span>.
-      </p>
-      <div class="hero-actions">
-        <a class="btn primary" href="#projects">Projects</a>
-        <a class="btn ghost" href="#contact">Contact</a>
-      </div>
-    </section>
-  </header>
-  <main>
-    <section id="about" class="panel reveal">
-      <h2>About</h2>
-      <p>Short punchy statement about mission + strengths (we can refine content).</p>
-    </section>
-    <section id="projects" class="panel-grid reveal">
-      <!-- Repeated card pattern -->
-      <article class="card">
-        <div class="card-header">
-          <h3>Project Name</h3>
-          <span class="tag">Rust</span>
+    <div class="container">
+        <!-- Cover Picture -->
+        <div class="cover">
+            <img src="cover.jpg" alt="Cover Picture">
         </div>
-        <p>One-liner outcome-focused description.</p>
-        <div class="card-footer">
-          <a href="#" class="inline-link">Code →</a>
+        <!-- Profile Picture -->
+        <div class="profile">
+            <img src="profile.jpg" alt="Profile Picture">
         </div>
-      </article>
-    </section>
-    <section id="timeline" class="timeline reveal">
-      <!-- Scroll-driven timeline items -->
-    </section>
-    <section id="contact" class="panel reveal">
-      <h2>Contact</h2>
-      <p>DMs open on <a href="https://github.com/ayoubhafiane">GitHub</a> / Email: <a href="mailto:you@example.com">you@example.com</a></p>
-    </section>
-  </main>
-  <footer class="site-footer">
-    <p>© <span id="year"></span> Ayoub Hafiane</p>
-  </footer>
+        <!-- Name and Description -->
+        <div class="info">
+            <h1>Ayoub Hafiane</h1>
+            <p>Just a distinguished gentleman trying to do his best in this pathetic world we are living in.</p>
+        </div>
+        <!-- Social Media Links -->
+        <div class="social-links">
+            <a href="https://www.instagram.com/x.x.ayoub.x.x/" target="_blank">
+                <i class="fab fa-instagram"></i> Instagram
+            </a>
+            <a href="https://x.com/ayoub_hafiane" target="_blank">
+                <i class="fab fa-twitter"></i> Twitter
+            </a>
+            <a href="http://t.me/cupcake_minmin" target="_blank">
+                <i class="fab fa-telegram"></i> Telegram
+            </a>
+            <a href="https://wa.me/212691162478" target="_blank">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            <a href="mailto:hafiane.ayoub@gmail.com" target="_blank">
+                <i class="fas fa-envelope"></i> Email
+            </a>
+        </div>
+        <!-- Image Gallery -->
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="image1.jpg" alt="Image 1">
+                <a href="#" class="link-icon" onclick="openLightbox('image1.jpg')">
+                    <i class="fas fa-eye"></i>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <img src="image2.jpg" alt="Image 2">
+                <a href="#" class="link-icon" onclick="openLightbox('image2.jpg')">
+                    <i class="fas fa-eye"></i>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <img src="image3.jpg" alt="Image 3">
+                <a href="#" class="link-icon" onclick="openLightbox('image3.jpg')">
+                    <i class="fas fa-eye"></i>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <img src="image4.jpg" alt="Image 4">
+                <a href="#" class="link-icon" onclick="openLightbox('image4.jpg')">
+                    <i class="fas fa-eye"></i>
+                </a>
+            </div>
+        </div>
+        <!-- Add to Contacts Button -->
+        <button class="add-to-contacts" onclick="downloadVCF()">Add to Contacts</button>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-image" src="" alt="Lightbox Image">
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
