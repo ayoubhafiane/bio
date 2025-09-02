@@ -19,3 +19,11 @@ function downloadVCF() {
     link.download = 'contact.vcf'; // File name for download
     link.click();
 }
+
+// Welcome Overlay logic
+function closeWelcomeOverlay() {
+    document.getElementById('welcome-overlay').style.display = 'none';
+}
+window.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('welcome-overlay').style.display = 'flex';
+});
