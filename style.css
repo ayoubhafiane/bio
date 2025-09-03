@@ -1,12 +1,4 @@
-/* Reset and basic styles */
-body {
-    font-family: 'Georgia', serif;
-    margin: 0;
-    padding: 0;
-    background: #f4f4f4 url('wall-texture.jpg') center/cover no-repeat;
-    text-align: center;
-    color: #333;
-}
+/* ...existing styles... */
 
 /* Welcome Overlay Styles */
 .welcome-overlay {
@@ -25,6 +17,7 @@ body {
     padding: 40px 30px;
     border-radius: 20px;
     box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+    position: relative;
 }
 .welcome-modal h2 {
     margin-bottom: 30px;
@@ -48,145 +41,21 @@ body {
     box-shadow: 0 4px 14px rgba(0,0,0,0.16);
 }
 
-/* Cover Picture */
-.cover img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-bottom-left-radius: 50% 20%;
-    border-bottom-right-radius: 50% 20%;
-    display: block;
+/* Stalker message animation */
+.stalker-message {
+    margin-top: 30px;
+    font-size: 1.25rem;
+    color: #ff3366;
+    font-weight: bold;
+    animation: shake 0.7s;
+    animation-iteration-count: 2;
 }
-
-/* Profile Picture */
-.profile img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    margin-top: -60px;
-    border: 4px solid white;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Name and Description */
-.info h1 {
-    font-size: 24px;
-    margin: 10px 0;
-    color: #333;
-}
-
-.info p {
-    font-size: 16px;
-    color: #666;
-}
-
-/* Social Links */
-.social-links {
-    margin: 20px 0;
-}
-
-.social-links a {
-    display: inline-block;
-    margin: 10px;
-    text-decoration: none;
-    color: #000;
-    font-size: 18px;
-    transition: color 0.3s ease;
-}
-
-.social-links a i {
-    margin-right: 8px;
-    font-size: 20px;
-    filter: grayscale(100%);
-    transition: filter 0.3s ease, color 0.3s ease;
-}
-
-.social-links a:hover i {
-    filter: grayscale(0%);
-    color: #333;
-}
-
-/* Gallery Section */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns per row */
-    gap: 10px;
-    margin: 20px 0;
-}
-
-.gallery-item {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.gallery-item:hover img {
-    transform: scale(1.1);
-}
-
-.link-icon {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: rgba(0, 0, 0, 0.6);
-    color: #fff;
-    padding: 8px;
-    border-radius: 50%;
-    text-decoration: none;
-    font-size: 16px;
-    transition: background 0.3s ease;
-}
-
-.link-icon:hover {
-    background: rgba(0, 0, 0, 0.8);
-}
-
-/* Add to Contacts Button */
-.add-to-contacts {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: linear-gradient(90deg, #ff7eb3, #ff758c);
-    color: white;
-    border: none;
-    border-radius: 30px;
-    padding: 15px 25px;
-    font-size: 18px;
-    cursor: pointer;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.add-to-contacts:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Lightbox Modal */
-.lightbox {
-    display: none; /* Hidden by default */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-
-.lightbox img {
-    max-width: 90%;
-    max-height: 90%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
+@keyframes shake {
+    0% { transform: translateX(0); }
+    15% { transform: translateX(-10px) rotate(-2deg);}
+    30% { transform: translateX(10px) rotate(2deg);}
+    45% { transform: translateX(-10px) rotate(-2deg);}
+    60% { transform: translateX(10px) rotate(2deg);}
+    75% { transform: translateX(-10px) rotate(-1deg);}
+    100% { transform: translateX(0);}
 }

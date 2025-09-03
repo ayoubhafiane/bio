@@ -24,6 +24,22 @@ function downloadVCF() {
 function closeWelcomeOverlay() {
     document.getElementById('welcome-overlay').style.display = 'none';
 }
+function showStalker() {
+    // Hide welcome buttons
+    var buttons = document.querySelector('.welcome-buttons');
+    if (buttons) buttons.style.display = 'none';
+    // Show stalker message with animation
+    var msg = document.getElementById('stalker-message');
+    msg.style.display = 'block';
+    msg.classList.remove('stalker-message'); // restart animation
+    void msg.offsetWidth; // trigger reflow for replay
+    msg.classList.add('stalker-message');
+    // After 2 seconds, hide overlay (let them in anyway)
+    setTimeout(closeWelcomeOverlay, 2000);
+}
+
+// Show overlay on load
 window.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('welcome-overlay').style.display = 'flex';
+    var overlay = document.getElementById('welcome-overlay');
+    if (overlay) overlay.style.display = 'flex';
 });
